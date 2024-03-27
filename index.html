@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Math Render</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header>Math Render</header>
+  
+  <div class="container">
+    <div class="output">
+      <p class="rendered_value"></p>
+      <button class="refresh">
+        <i class="material-icons">refresh</i>
+      </button>
+    </div>
+    
+    <!-- <textarea class="input" cols="30" rows="5">x + \frac{1}{x} = 2</textarea> -->
+    <textarea class="input" cols="30" rows="5"></textarea>
+
+
+    <div class="quick_actions"></div>
+    
+    <hr>
+    
+    <div class="actions"></div>
+  </div>
+
+  <script defer type="module" src="scripts/main.js"></script>
+</body>
+</html>

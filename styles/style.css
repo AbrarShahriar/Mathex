@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --dark-gray: rgb(51, 51, 51);
-  --gray: rgba(71, 71, 71, 1);
-  --light-gray: rgba(91, 91, 91, 1);
-  --white: rgb(240, 240, 240);
+/*   --dark-primary: rgb(51, 51, 51);
+--primary: rgba(71, 71, 71, 1);
+--light-primary-contrast: rgba(91, 91, 91, 1);
+--white: rgb(240, 240, 240); */
+  
+  --dark-primary: #222831;
+  --primary: #31363F;
+  --light-primary-contrast: #6E85B2;
+  --white: #fff;
 }
 
 *, *::before, *::after {
@@ -13,20 +18,22 @@
   box-sizing: border-box;
 }
 
+.katex { font-size: 1.1em; }
+
 body {
   font-family: "Poppins";
-  background: var(--dark-gray);
+  background: var(--dark-primary);
   color: var(--white);
 }
 
 hr {
   opacity: .1;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 header {
   padding: 15px;
-  background: var(--light-gray);
+  background: var(--light-primary-contrast);
   box-shadow: 1px 0 15px -7px rgba(0,0,0,.25);
   margin-bottom: 40px;
 }
@@ -38,19 +45,20 @@ header {
 }
 
 .container .output {
-  background: var(--gray);
+  background: var(--primary);
   padding: 20px 15px;
-  margin-bottom: 40px;
+  margin: 30px 0;
   text-align: center;
-  border-radius: 10px;
-  
+  border-radius: 5px;
+  border: 1px solid var(--light-primary-contrast);
+
   display: flex;
   align-items: center;
+  height: 80px;
 }
 
 .container .output .rendered_value {
   margin-right: auto;
-  font-size: 20px;
 }
 
 .container .output .refresh {
@@ -64,13 +72,13 @@ header {
 
 .container .input {
   width: 100%;
-  background: var(--gray);
+  background: var(--primary);
   color: var(--white);
   font-size: 16px;
   padding: 10px;
   outline: none;
-  border: 1px solid var(--light-gray);
-  border-radius: 10px;
+  border: 1px solid var(--light-primary-contrast);
+  border-radius: 5px;
   resize: none;
   margin-bottom: 10px;
 }
@@ -79,12 +87,12 @@ header {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .container .quick_actions .quick_action {
-  background: var(--light-gray);
+  /* background: var(--light-primary-contrast); */
   text-align: center;
   border-radius: 5px;
   width: 40px;
@@ -95,17 +103,22 @@ header {
 }
 
 .container .actions {
-  background: var(--gray);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
+  background: var(--primary);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  /* gap: 10px; */
   padding: 10px;
   border-radius: 5px;
+  
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .container .actions .action {
-  background: var(--light-gray);
+  background: var(--light-primary-contrast);
   width: 60px;
   height: 60px;
   font-size: 14px;
@@ -118,13 +131,27 @@ header {
   user-select: none;
 }
 
+.container .actions .action.has_children::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  background: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
 .container .actions .menu {
   position: absolute;
+  z-index: 10;
   top: -150%;
   left: 0;
   display: none;
+  flex-direction: column;
   gap: 10px;
-  background: var(--gray);
+  background: var(--primary);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
@@ -137,5 +164,6 @@ header {
 }
 
 .container .actions .option:hover, .option.hovered {
-  background: var(--light-gray);
+  background: var(--light-primary-contrast);
+  border-radius: 5px;
 }

@@ -18,6 +18,8 @@ export default function actionDivButton({ command, cursorOffset, children }) {
   menuDiv.classList.add("menu")
   
   if(children) {
+    actionDiv.classList.add("has_children")
+    
     children.forEach(child => {
       const optionDiv = createEl("div")
       optionDiv.classList.add("option")

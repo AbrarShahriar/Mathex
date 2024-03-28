@@ -32,7 +32,7 @@ quickActionList.forEach(action => {
   quickAction.classList.add("quick_action")
   quickAction.innerText = action
   
-  quickAction.addEventListener("click", () => addTextToTextarea(action))
+  quickAction.addEventListener("click", () => addTextToTextarea(action, action.length))
   
   elements.quickActions.append(quickAction)
 })

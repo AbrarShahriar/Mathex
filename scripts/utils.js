@@ -4,7 +4,8 @@ export const addStrAtPos = (str, pos, val) => str.slice(0, pos) + val + str.slic
 export const render = () => {
   console.log("rendering latex")
   katex.render(select(".input").value, select(".rendered_value"), {
-    throwOnError: true
+    throwOnError: false,
+    displayMode: true
   });
 }
 export const addTextToTextarea = (strToAdd, cursorOffset = 1) => {

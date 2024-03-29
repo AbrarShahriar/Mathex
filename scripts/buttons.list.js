@@ -4,7 +4,7 @@ function buttonClickHandler(command) {
 }
 
 export const quickActionList = [
-  "\\", "{", "}", "_", "^", "\\:"
+  "\\", "{", "}", "(", ")", "_", "^", "\\:"
 ]
 
 export const buttonsList = [

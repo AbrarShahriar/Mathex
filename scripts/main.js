@@ -12,8 +12,18 @@ const elements = {
   refreshBtn: select('.refresh'),
   input: select(".input"),
   quickActions: select(".quick_actions"),
-  actions: select(".actions")
+  actions: select(".actions"),
+  clearBtn: select(".clear"),
+  copyBtn: select(".copy"),
+  shareBtn: select(".share")
 }
+
+const url = new URL(window.location)
+
+if(url.searchParams.has("inv")) {
+  elements.input.value = atob(url.searchParams.get("inv"))
+}
+
 
 // Initial render
 render()
@@ -25,6 +35,36 @@ elements.input.addEventListener("keyup", () => render())
 
 elements.refreshBtn.addEventListener("click", () => render())
 
+elements.clearBtn.addEventListener("click", () => {
+  elements.input.value = ""
+  render()
+})
+
+elements.copyBtn.addEventListener("click", () => {
+  elements.input.select()
+  elements.input.setSelectionRange(0, 99999)
+  navigator.clipboard.writeText(elements.input.value)
+})
+
+elements.shareBtn.addEventListener("click", async () => {
+  let inv = btoa(elements.input.value)
+  // url.searchParams.set("inv", inv)
+  // navigator.clipboard.writeText(url)
+  
+  let shareData = {
+    title: "Mat-Ex Equation",
+    text: "Click to see the equation your friend sent you!",
+    url: url.href
+  }
+  
+  try {
+    await navigator.share(shareData)
+  } catch (e) {
+    console.log(e)
+  }
+  
+})
+
 // Render quick action buttons
 
 quickActionList.forEach(action => {
@@ -33,6 +73,7 @@ quickActionList.forEach(action => {
   quickAction.innerText = action
   
   quickAction.addEventListener("click", () => addTextToTextarea(action, action.length))
+    render()
   
   elements.quickActions.append(quickAction)
 })

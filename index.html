@@ -22,14 +22,30 @@
   <div class="container">
     <div class="output">
       <p class="rendered_value"></p>
-      <button class="refresh">
-        <i class="material-icons">refresh</i>
-      </button>
+      <div class="output_actions">
+        <button class="refresh">
+          <i class="material-icons">refresh</i>
+        </button>
+        <button class="share">
+          <i class="material-icons">share</i>
+        </button>
+      </div>
+      
     </div>
     
     <hr>
     
-    <textarea class="input" cols="30" rows="5">\lim_{x \to 0} \: \frac{\sin^2(x)}{1+\sqrt{x}}</textarea>
+    <div class="input_container">
+      <textarea class="input" cols="30" rows="5">\lim_{x \to 0} \: \frac{\sin^2(x)}{1+\sqrt{x}}</textarea>
+      <div class="input_actions">
+        <div class="input_action clear">
+          <i class="material-icons">clear</i>
+          </div>
+        <div class="input_action">
+          <i class="material-icons copy">content_copy</i>
+          </div>
+      </div>
+    </div>
   
     <div class="quick_actions"></div>
     

@@ -195,17 +195,25 @@ export const buttonsList = [
     ]
   },
   {
-    command: "()",
-    cursorOffset: 1,
+    command: "\\int  \\: dx",
+    cursorOffset: 5,
     children: [
       {
-        command: "\\{\\}",
-        cursorOffset: 2
+        command: "\\frac{d}{dx}",
+        cursorOffset: 13
       },
       {
-        command: "[]",
-        cursorOffset: 1
-      }
+        command: "\\frac{\\partial}{\\partial x}",
+        cursorOffset: 29
+      },
+      {
+        command: "\\frac{d}{dx}[]_{x=a}",
+        cursorOffset: 13
+      },
+      {
+        command: "\\int_0^1  \\: dx",
+        cursorOffset: 9
+      },
     ]
   },
   {
@@ -329,28 +337,6 @@ export const buttonsList = [
     ]
   },
   {
-    command: "\\int  \\: dx",
-    cursorOffset: 5,
-    children: [
-      {
-        command: "\\frac{d}{dx}",
-        cursorOffset: 13
-      },
-      {
-        command: "\\frac{\\partial}{\\partial x}",
-        cursorOffset: 29
-      },
-      {
-        command: "\\frac{d}{dx}[]_{x=a}",
-        cursorOffset: 13
-      },
-      {
-        command: "\\int_0^1  \\: dx",
-        cursorOffset: 9
-      },
-    ]
-  },
-  {
     command: "\\sum ",
     cursorOffset: 5,
     children: [
@@ -360,4 +346,18 @@ export const buttonsList = [
       }
     ]
   },
+  {
+    command: "()",
+    cursorOffset: 1,
+    children: [
+      {
+        command: "\\{\\}",
+        cursorOffset: 2
+      },
+      {
+        command: "[]",
+        cursorOffset: 1
+      }
+    ]
+  }
 ]

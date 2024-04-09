@@ -155,15 +155,15 @@ export const buttonsList = [
     ]
   },
   {
-    command: "\\sqrt{}",
-    cursorOffset: 6,
+    command: "\\sqrt{x}",
+    cursorOffset: 7,
     children: [
       {
-        command: "\\sqrt[3]{}",
-        cursorOffset: 9
+        command: "\\sqrt[3]{x}",
+        cursorOffset: 10
       },
       {
-        command: "\\sqrt[n]{}",
+        command: "\\sqrt[n]{x}",
         cursorOffset: 7
       }
     ]

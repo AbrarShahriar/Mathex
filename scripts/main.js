@@ -49,12 +49,11 @@ elements.copyBtn.addEventListener("click", () => {
 elements.shareBtn.addEventListener("click", async () => {
   let inv = btoa(elements.input.value)
   url.searchParams.set("inv", inv)
-  // navigator.clipboard.writeText(url)
   
   let shareData = {
     title: "Mat-Ex Equation",
     text: "Click to see the equation!",
-    url: url.href
+    url: url.href,
   }
   
   try {

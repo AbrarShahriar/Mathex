@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+  }
+  body {
+    height: 100vh;
+    font-family: "Poppins";
+    width: 100vw;
+  }
+  
+  .katex {
+    font-size: 1.15em;
+  }
+
+    
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1em;
+  }
+  
+  th {
+    font-size: 1.1em;
+
+  }
+  
+  td, th {
+    border: 1px solid #000;
+    text-align: center;
+
+  }
+  
+  td {
+    font-size: 1em;
+    padding: 5px;
+  }
+  
+  th {
+    padding: 10px;
+  }
+  
+ 
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  </style>
+</head>
+
+<body>
+    
+    <table>
+      
+      <tr>
+        <th>LaTeX Command</th>
+        <th>Output</th>
+      </tr>
+      
+    </table>
+    
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+              ],
+        throwOnError: false,
+        minRuleThickness: 0.05
+      });
+    });
+    
+    const commands = [
+      "\\int_a^b f(x) dx",
+      "\\lim_{x \\to 0} \\: x+x^2",
+      "F = G \\frac{{m_1 m_2}}{{r^2}}",
+      "e^{i\\pi} + 1 = 0",
+      "\\phi = \\frac{{1 + \\sqrt{5}}}{2}",
+      "\\pi(x) \\sim \\frac{x}{\\log x}",
+      "h \\propto t^2",
+      `\\begin{bmatrix}
+1 & 2 & 3 \\\\
+a & b & c
+\\end{bmatrix}`,
+"\\hat{a}=\\frac{\\vec{a}}{|\\vec{a}|}"
+    ]
+    
+    const table = document.querySelector("table")
+    
+    commands.forEach(command => {
+      table.innerHTML += `<tr>
+        <td>${command}</td>
+        <td>$$${command}$$</td>
+      </tr>`
+    })
+  </script>
+</body>
+
+</html>

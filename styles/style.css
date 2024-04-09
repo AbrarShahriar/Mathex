@@ -107,7 +107,7 @@ header {
 }
 
 .container .input_actions .input_action i {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .container .quick_actions {
@@ -168,9 +168,11 @@ header {
   position: absolute;
   z-index: 10;
   top: -150%;
-  width: 50px;
+  min-width: 50px;
+  width: fit-content;
   display: none;
   flex-direction: column;
+  gap: 5px;
   background: var(--primary);
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -185,7 +187,7 @@ header {
 }
 
 .container .actions .option .katex {
-  font-size: .9em;
+  font-size: 1em;
 }
 
 .container .actions .option:hover, .option.hovered {

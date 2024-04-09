@@ -9,6 +9,118 @@ export const quickActionList = [
 
 export const buttonsList = [
   {
+    command: "\\alpha ",
+    cursorOffset: 7,
+    children: [
+      {
+        command: "\\beta ",
+        cursorOffset: 6
+      },
+      {
+        command: "\\gamma ",
+        cursorOffset: 7,
+      },
+      {
+        command: "\\lambda ",
+        cursorOffset: 8
+      },
+      {
+        command: "\\theta ",
+        cursorOffset: 7
+      },
+      {
+        command: "\\psi ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\sigma ",
+        cursorOffset: 7
+      },
+      {
+        command: "\\mu ",
+        cursorOffset: 4
+      }
+    ]
+  },
+  {
+    command: "\\eta ",
+    cursorOffset: 5,
+    children: [
+      {
+        command: "\\epsilon ",
+        cursorOffset: 9
+      },
+      {
+        command: "\\omega ",
+        cursorOffset: 6
+      },
+      {
+        command: "\\phi ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\pi ",
+        cursorOffset: 4
+      },
+      {
+        command: "\\rho ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\tau ",
+        cursorOffset: 6
+      },
+      {
+        command: "\\zeta ",
+        cursorOffset: 6
+      },
+    ]
+  },
+  {
+    command: "\\Delta ",
+    cursorOffset: 7,
+    children: [
+      {
+        command: "\\nabla ",
+        cursorOffset: 7
+      },
+      {
+        command: "\\Omega ",
+        cursorOffset: 7
+      },
+      {
+        command: "\\Phi ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\Psi ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\infty ",
+        cursorOffset: 6
+      }
+    ]
+  },
+  {
+    command: "\\hat{x}",
+    cursorOffset: 8,
+    children: [
+      {
+        command: "\\bar{x}",
+        cursorOffset: 8
+      },
+      {
+        command: "\\vec{x}",
+        cursorOffset: 8
+      },
+      {
+        command: "\\dot{x}",
+        cursorOffset: 8
+      }
+    ]
+  },
+  {
     command: "\\frac{x}{y}",
     cursorOffset: 7,
     children: [
@@ -131,10 +243,58 @@ export const buttonsList = [
         cursorOffset: 8,
       },
       {
+        command: "\\cong ",
+        cursorOffset: 6
+      },
+      {
+        command: "\\neq ",
+        cursorOffset: 5
+      },
+      {
         command: "\\propto ",
         cursorOffset: 9
       }
     ]
+  },
+  {
+    command: "\\geq ",
+    cursorOffset: 5,
+    children: [
+      {
+        command: "\\leq ",
+        cursorOffset: 5
+      },
+      {
+        command: "\\leftarrow ",
+        cursorOffset: 11
+      },
+      {
+        command: "\\rightarrow ",
+        cursorOffset: 12
+      },
+      {
+        command: "\\rightleftharpoons ",
+        cursorOffset: 19
+      }
+    ]
+  },
+  {
+    command: "\\perp ",
+    cursorOffset: 6,
+    children: [
+      {
+        command: "\\parallel ",
+        cursorOffset: 11
+        },
+      {
+        command: "\\angle ",
+        cursorOffset: 7
+        },
+      {
+        command: "\\triangle ",
+        cursorOffset: 10
+        }
+      ]
   },
   {
     command: "\\log ",
@@ -177,6 +337,10 @@ export const buttonsList = [
         cursorOffset: 13
       },
       {
+        command: "\\frac{\\partial}{\\partial x}",
+        cursorOffset: 29
+      },
+      {
         command: "\\frac{d}{dx}[]_{x=a}",
         cursorOffset: 13
       },
@@ -184,6 +348,16 @@ export const buttonsList = [
         command: "\\int_0^1  \\: dx",
         cursorOffset: 9
       },
+    ]
+  },
+  {
+    command: "\\sum ",
+    cursorOffset: 5,
+    children: [
+      {
+        command: "\\sum_{n=1}^{\\infty} ",
+        cursorOffset: 20
+      }
     ]
   },
 ]
